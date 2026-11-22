@@ -1,0 +1,15 @@
+basePort <- 0b11111010000;
+portOffset <- 0b1010000;
+envPrefix <- 'prod_';
+
+dict(
+    serviceName = ?[envPrefix 'api_gateway' +],
+    listenPort = ?[basePort portOffset +],
+    workerThreads = 0b1000,
+    database = dict(
+        host = 'db.internal',
+        port = 0b1010100111000,
+        poolSize = 0b10000,
+        shardIndex = ?[0b10111 0b100 mod]
+    )
+)

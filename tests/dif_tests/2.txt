@@ -1,0 +1,14 @@
+rankCode <- 0b1010011;
+baseStrength <- 0b1010;
+bonusStrength <- 0b101;
+
+dict(
+    heroClass = 'Support',
+    rankBadge = ?[rankCode chr],
+    stats = dict(
+        level = 0b11001,
+        strength = ?[baseStrength bonusStrength +],
+        critRemainder = ?[0b11001 0b111 mod]
+    ),
+    guild = 'Genshin Impact'
+)

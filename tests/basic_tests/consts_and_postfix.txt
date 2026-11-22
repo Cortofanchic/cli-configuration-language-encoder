@@ -1,0 +1,8 @@
+base <- 0b1000001;
+offset <- 0b10;
+letter <- ?[base offset + chr];
+rem <- ?[0b1010 0b11 mod];
+dict(
+    char = ?[letter],
+    modulo = ?[rem]
+)

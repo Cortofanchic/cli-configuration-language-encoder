@@ -1,0 +1,8 @@
+dict(
+    host = 'localhost',
+    port = 0b11111010000,
+    nested = dict(
+        flag = 0b1,
+        label = 'inner'
+    )
+)
